@@ -1,0 +1,11 @@
+[Unit]
+Description=PyUpdater - Reads the files and update those information to configured webservices.
+After=multi-user.target
+
+[Service]
+User=%i
+WorkingDirectory=/
+ExecStart=/usr/bin/PyUpdater.py
+
+[Install]
+WantedBy=multi-user.target

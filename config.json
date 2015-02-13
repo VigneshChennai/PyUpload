@@ -1,0 +1,43 @@
+[
+    {
+        "name" : "Sample configuration",
+        
+        "directories" : {
+            "check_dir" : "/content/SMS/inbox",
+            "sucess_dir" : "/content/SMS/success",
+            "failure" : "/content/SMS/failure"
+        },
+        
+        "fileparsing" : {
+            "separator" : "\n",
+            "1" : "mobile",
+            "2-5" : "msg"
+        },
+        
+        "webservice" : {
+            "authentication" : {
+                "url" : "http://myexpenses-vigneshchennai.rhcloud.com/login",
+                "method" : "GET",
+                "data" : {
+                    "email" : "vignesh",
+                    "password" : "dummy"
+                },
+                "verification" : {
+                    "status" : 0
+                }
+            },
+            
+            "upload" : {
+                "url" : "http://myexpenses-vigneshchennai.rhcloud.com/add_via_sms",
+                "method" : "GET",
+                "data" : {
+                    "email" : "vignesh",
+                    "password" : "dummy"
+                },
+                "verification" : {
+                    "status" : 0
+                }
+            }
+        }
+    }
+]
